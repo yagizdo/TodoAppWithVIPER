@@ -17,8 +17,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         todosTableView.delegate = self
         todosTableView.dataSource = self
+        updateTitle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateTitle()
+    }
     
     @IBAction func addTodoButton(_ sender: Any) {
         performSegue(withIdentifier: "toAddTodo", sender: self)
@@ -31,6 +35,10 @@ class ViewController: UIViewController {
                 gidilecekVC.delegate = delegate
             }
         }
+    }
+    
+    func updateTitle() {
+        self.title = "Todos (\(todos.count) remaining)"
     }
 }
 
@@ -49,6 +57,8 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
         hucre.todoTitle.text = todo.title
         hucre.todoDescription.text = todo.description
         
+        
+        // Added cellBackground (view) background color and corner radius
         hucre.cellBackground.backgroundColor = UIColor(white: 0.95, alpha: 1)
         hucre.cellBackground.layer.cornerRadius = 10.0
         
@@ -63,8 +73,20 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
         return hucre
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15.0
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let swipedTodo = todos[indexPath.row]
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+            (contextualAction,view,bool) in
+            
+            if let todoIndex = self.todos.firstIndex(where: {$0.title == swipedTodo.title}) {
+                self.todos.remove(at: todoIndex)
+                self.todosTableView.reloadData()
+                self.updateTitle()
+            }
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
 

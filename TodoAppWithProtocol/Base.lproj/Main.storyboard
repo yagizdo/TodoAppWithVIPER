@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Todos-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodoAppWithProtocol" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                             <constraint firstItem="Nay-3V-kXj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="stz-hZ-8ye"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Todos" id="fZr-Qc-p4l"/>
+                    <navigationItem key="navigationItem" id="fZr-Qc-p4l"/>
                     <connections>
                         <outlet property="todosTableView" destination="Nay-3V-kXj" id="40W-nE-63h"/>
                         <segue destination="Ics-Tg-eQP" kind="show" identifier="toAddTodo" id="DbY-iH-n4Q"/>
