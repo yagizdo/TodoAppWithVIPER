@@ -16,43 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nay-3V-kXj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nay-3V-kXj">
                                 <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoHucre" id="TZB-pq-bPo" customClass="TableViewCell" customModule="TodoAppWithProtocol" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="53.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoHucre" rowHeight="100" id="TZB-pq-bPo" customClass="TableViewCell" customModule="TodoAppWithProtocol" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TZB-pq-bPo" id="0G8-Dq-DSe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WhE-LQ-cCL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWP-Pm-P4I">
+                                                    <rect key="frame" x="10" y="10" width="394" height="80"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ben bir Todoyum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keK-bq-KqF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="24.5"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bende bir Todo Aciklamasiyim" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVz-5K-1bP">
-                                                            <rect key="frame" x="0.0" y="29.5" width="414" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WhE-LQ-cCL">
+                                                            <rect key="frame" x="16" y="16" width="362" height="48"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ben bir Todoyum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keK-bq-KqF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="362" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bende bir Todo Aciklamasiyim" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVz-5K-1bP">
+                                                                    <rect key="frame" x="0.0" y="26.5" width="362" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
-                                                </stackView>
+                                                    <constraints>
+                                                        <constraint firstItem="WhE-LQ-cCL" firstAttribute="leading" secondItem="fWP-Pm-P4I" secondAttribute="leading" constant="16" id="AP3-2W-eld"/>
+                                                        <constraint firstItem="WhE-LQ-cCL" firstAttribute="top" secondItem="fWP-Pm-P4I" secondAttribute="top" constant="16" id="ER8-Lg-csJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="WhE-LQ-cCL" secondAttribute="bottom" constant="16" id="U6A-vC-nEi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WhE-LQ-cCL" secondAttribute="trailing" constant="16" id="rhF-9K-4zD"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="WhE-LQ-cCL" secondAttribute="bottom" id="3aS-rD-Akn"/>
-                                                <constraint firstItem="WhE-LQ-cCL" firstAttribute="leading" secondItem="0G8-Dq-DSe" secondAttribute="leading" id="eBj-3i-Hgh"/>
-                                                <constraint firstItem="WhE-LQ-cCL" firstAttribute="top" secondItem="0G8-Dq-DSe" secondAttribute="top" id="h8v-ys-dqa"/>
-                                                <constraint firstAttribute="trailing" secondItem="WhE-LQ-cCL" secondAttribute="trailing" id="ljx-GY-K8V"/>
+                                                <constraint firstAttribute="bottom" secondItem="fWP-Pm-P4I" secondAttribute="bottom" constant="10" id="5hV-k8-fnF"/>
+                                                <constraint firstItem="fWP-Pm-P4I" firstAttribute="leading" secondItem="0G8-Dq-DSe" secondAttribute="leading" constant="10" id="ZqA-7v-s0G"/>
+                                                <constraint firstItem="fWP-Pm-P4I" firstAttribute="top" secondItem="0G8-Dq-DSe" secondAttribute="top" constant="10" id="d7p-Gn-mXF"/>
+                                                <constraint firstAttribute="trailing" secondItem="fWP-Pm-P4I" secondAttribute="trailing" constant="10" id="k9Q-hW-lmb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
                                         <connections>
+                                            <outlet property="cellBackground" destination="fWP-Pm-P4I" id="nO3-jv-Ymh"/>
                                             <outlet property="todoDescription" destination="CVz-5K-1bP" id="kva-U8-01h"/>
                                             <outlet property="todoTitle" destination="keK-bq-KqF" id="S1n-h4-yP5"/>
                                         </connections>
@@ -173,6 +186,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

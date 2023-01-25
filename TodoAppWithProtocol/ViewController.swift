@@ -49,14 +49,34 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
         hucre.todoTitle.text = todo.title
         hucre.todoDescription.text = todo.description
         
+        hucre.cellBackground.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        hucre.cellBackground.layer.cornerRadius = 10.0
+        
+        hucre.backgroundColor = UIColor.systemPurple
+        
+        hucre.selectionStyle = .none
+        
+        //hucre.layer.borderColor = UIColor.black.cgColor
+        
+        //hucre.layer.borderWidth = 2.0
+        
         return hucre
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 15.0
     }
 }
 
 extension ViewController: AddTodoVCToViewController {
     func addTodo(todo: Todo) {
         todos.append(todo)
+        
+        // After added todo reload table view
         self.todosTableView.reloadData()
+        
+        // After added todo go previous page with this code
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

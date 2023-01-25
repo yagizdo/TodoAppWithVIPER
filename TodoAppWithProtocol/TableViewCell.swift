@@ -14,6 +14,8 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var todoDescription: UILabel!
     
+    @IBOutlet weak var cellBackground: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
