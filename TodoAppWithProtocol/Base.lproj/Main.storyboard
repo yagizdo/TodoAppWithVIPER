@@ -118,6 +118,9 @@
                                     <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addTodoButton:" destination="Ics-Tg-eQP" eventType="touchUpInside" id="TGt-Xg-Eid"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U5p-cj-QAe"/>
@@ -138,6 +141,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Todo" id="Bkm-cR-ViJ"/>
+                    <connections>
+                        <outlet property="todoDescTF" destination="FJn-O8-xIx" id="iYw-Wj-TB9"/>
+                        <outlet property="todoTitleTF" destination="IJH-2u-9Zw" id="nCA-om-VAe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItI-qr-4ap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

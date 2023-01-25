@@ -15,12 +15,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        todosTableView.delegate = self
+        todosTableView.dataSource = self
     }
     
     
     @IBAction func addTodoButton(_ sender: Any) {
-        performSegue(withIdentifier: "toAddTodo", sender: nil)
+        performSegue(withIdentifier: "toAddTodo", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddTodo" {
+            if let delegate = sender as? AddTodoVCToViewController {
+                let gidilecekVC = segue.destination as! AddTodoViewController
+                gidilecekVC.delegate = delegate
+            }
+        }
     }
 }
 
@@ -40,6 +50,13 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
         hucre.todoDescription.text = todo.description
         
         return hucre
+    }
+}
+
+extension ViewController: AddTodoVCToViewController {
+    func addTodo(todo: Todo) {
+        todos.append(todo)
+        self.todosTableView.reloadData()
     }
 }
 
