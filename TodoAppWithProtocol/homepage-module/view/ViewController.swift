@@ -13,15 +13,15 @@ class ViewController: UIViewController {
     
     var todos = [Todo]()
     
+    var homepagePresentDelegate : ViewToPresenterHomepageProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         todosTableView.delegate = self
         todosTableView.dataSource = self
         updateTitle()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        updateTitle()
+        HomepageRouter.createModule(ref: self)
+        homepagePresentDelegate?.getAllTodos()
     }
     
     @IBAction func addTodoButton(_ sender: Any) {
@@ -84,6 +84,14 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
             }
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+}
+
+extension ViewController : PresenterToViewHomepageProtocol {
+    func transferDataToView(todoList: [Todo]) {
+        self.todos = todoList
+        updateTitle()
+        self.todosTableView.reloadData()
     }
 }
 

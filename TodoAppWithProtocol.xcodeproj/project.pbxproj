@@ -11,6 +11,10 @@
 		104969CF2983D8EB0068E148 /* AddTodoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969CE2983D8EB0068E148 /* AddTodoInteractor.swift */; };
 		104969D12983D9000068E148 /* AddTodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969D02983D9000068E148 /* AddTodoRouter.swift */; };
 		104969D32983D90C0068E148 /* AddTodoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969D22983D90C0068E148 /* AddTodoProtocols.swift */; };
+		104969D829840F410068E148 /* HomepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969D729840F410068E148 /* HomepagePresenter.swift */; };
+		104969DB29840F650068E148 /* HomepageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969DA29840F650068E148 /* HomepageInteractor.swift */; };
+		104969DE29840F7A0068E148 /* HomepageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969DD29840F7A0068E148 /* HomepageRouter.swift */; };
+		104969E129840F8C0068E148 /* HomepageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969E029840F8C0068E148 /* HomepageProtocols.swift */; };
 		10B74BCB2981473400DE453F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BCA2981473400DE453F /* AppDelegate.swift */; };
 		10B74BCD2981473400DE453F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BCC2981473400DE453F /* SceneDelegate.swift */; };
 		10B74BCF2981473400DE453F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BCE2981473400DE453F /* ViewController.swift */; };
@@ -27,6 +31,10 @@
 		104969CE2983D8EB0068E148 /* AddTodoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoInteractor.swift; sourceTree = "<group>"; };
 		104969D02983D9000068E148 /* AddTodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoRouter.swift; sourceTree = "<group>"; };
 		104969D22983D90C0068E148 /* AddTodoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoProtocols.swift; sourceTree = "<group>"; };
+		104969D729840F410068E148 /* HomepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepagePresenter.swift; sourceTree = "<group>"; };
+		104969DA29840F650068E148 /* HomepageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageInteractor.swift; sourceTree = "<group>"; };
+		104969DD29840F7A0068E148 /* HomepageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRouter.swift; sourceTree = "<group>"; };
+		104969E029840F8C0068E148 /* HomepageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageProtocols.swift; sourceTree = "<group>"; };
 		10B74BC72981473400DE453F /* TodoAppWithProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAppWithProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B74BCA2981473400DE453F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B74BCC2981473400DE453F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,75 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		104969D429840F180068E148 /* homepage-module */ = {
+			isa = PBXGroup;
+			children = (
+				104969DF29840F800068E148 /* protocols */,
+				104969E229840FA20068E148 /* tableview */,
+				104969DC29840F6A0068E148 /* router */,
+				104969D929840F590068E148 /* interactor */,
+				104969D629840F350068E148 /* presenter */,
+				104969D529840F2F0068E148 /* view */,
+			);
+			path = "homepage-module";
+			sourceTree = "<group>";
+		};
+		104969D529840F2F0068E148 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				10B74BCE2981473400DE453F /* ViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		104969D629840F350068E148 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				104969D729840F410068E148 /* HomepagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		104969D929840F590068E148 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				104969DA29840F650068E148 /* HomepageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		104969DC29840F6A0068E148 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				104969DD29840F7A0068E148 /* HomepageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		104969DF29840F800068E148 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				104969E029840F8C0068E148 /* HomepageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		104969E229840FA20068E148 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				10B74BDE2981489300DE453F /* TableViewCell.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		104969E329840FB30068E148 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				10B74BE029814B7B00DE453F /* Todo.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
 		10B74BBE2981473400DE453F = {
 			isa = PBXGroup;
 			children = (
@@ -122,12 +199,11 @@
 		10B74BC92981473400DE453F /* TodoAppWithProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				104969E329840FB30068E148 /* entity */,
 				104969C62983D89F0068E148 /* addtodo-module */,
 				10B74BCA2981473400DE453F /* AppDelegate.swift */,
 				10B74BCC2981473400DE453F /* SceneDelegate.swift */,
-				10B74BCE2981473400DE453F /* ViewController.swift */,
-				10B74BDE2981489300DE453F /* TableViewCell.swift */,
-				10B74BE029814B7B00DE453F /* Todo.swift */,
+				104969D429840F180068E148 /* homepage-module */,
 				10B74BD02981473400DE453F /* Main.storyboard */,
 				10B74BD32981473500DE453F /* Assets.xcassets */,
 				10B74BD52981473500DE453F /* LaunchScreen.storyboard */,
@@ -208,15 +284,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				104969CD2983D8D70068E148 /* AddTodoPresenter.swift in Sources */,
+				104969D829840F410068E148 /* HomepagePresenter.swift in Sources */,
 				10B74BCF2981473400DE453F /* ViewController.swift in Sources */,
 				104969CF2983D8EB0068E148 /* AddTodoInteractor.swift in Sources */,
 				10B74BDF2981489300DE453F /* TableViewCell.swift in Sources */,
 				10B74BCB2981473400DE453F /* AppDelegate.swift in Sources */,
 				10B74BCD2981473400DE453F /* SceneDelegate.swift in Sources */,
 				10B74BE329814CD900DE453F /* AddTodoViewController.swift in Sources */,
+				104969DB29840F650068E148 /* HomepageInteractor.swift in Sources */,
+				104969DE29840F7A0068E148 /* HomepageRouter.swift in Sources */,
 				104969D32983D90C0068E148 /* AddTodoProtocols.swift in Sources */,
 				104969D12983D9000068E148 /* AddTodoRouter.swift in Sources */,
 				10B74BE129814B7B00DE453F /* Todo.swift in Sources */,
+				104969E129840F8C0068E148 /* HomepageProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
