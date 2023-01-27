@@ -30,10 +30,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddTodo" {
-            if let delegate = sender as? AddTodoVCToViewController {
-                let gidilecekVC = segue.destination as! AddTodoViewController
-                gidilecekVC.delegate = delegate
-            }
+      
         }
     }
     
@@ -87,18 +84,6 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
             }
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
-    }
-}
-
-extension ViewController: AddTodoVCToViewController {
-    func addTodo(todo: Todo) {
-        todos.append(todo)
-        
-        // After added todo reload table view
-        self.todosTableView.reloadData()
-        
-        // After added todo go previous page with this code
-        self.navigationController?.popViewController(animated: true)
     }
 }
 

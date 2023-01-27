@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		104969CD2983D8D70068E148 /* AddTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969CC2983D8D70068E148 /* AddTodoPresenter.swift */; };
+		104969CF2983D8EB0068E148 /* AddTodoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969CE2983D8EB0068E148 /* AddTodoInteractor.swift */; };
+		104969D12983D9000068E148 /* AddTodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969D02983D9000068E148 /* AddTodoRouter.swift */; };
+		104969D32983D90C0068E148 /* AddTodoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104969D22983D90C0068E148 /* AddTodoProtocols.swift */; };
 		10B74BCB2981473400DE453F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BCA2981473400DE453F /* AppDelegate.swift */; };
 		10B74BCD2981473400DE453F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BCC2981473400DE453F /* SceneDelegate.swift */; };
 		10B74BCF2981473400DE453F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BCE2981473400DE453F /* ViewController.swift */; };
@@ -16,10 +20,13 @@
 		10B74BDF2981489300DE453F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BDE2981489300DE453F /* TableViewCell.swift */; };
 		10B74BE129814B7B00DE453F /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BE029814B7B00DE453F /* Todo.swift */; };
 		10B74BE329814CD900DE453F /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BE229814CD900DE453F /* AddTodoViewController.swift */; };
-		10B74BE52981509300DE453F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B74BE42981509300DE453F /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		104969CC2983D8D70068E148 /* AddTodoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoPresenter.swift; sourceTree = "<group>"; };
+		104969CE2983D8EB0068E148 /* AddTodoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoInteractor.swift; sourceTree = "<group>"; };
+		104969D02983D9000068E148 /* AddTodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoRouter.swift; sourceTree = "<group>"; };
+		104969D22983D90C0068E148 /* AddTodoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoProtocols.swift; sourceTree = "<group>"; };
 		10B74BC72981473400DE453F /* TodoAppWithProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAppWithProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B74BCA2981473400DE453F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B74BCC2981473400DE453F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +38,6 @@
 		10B74BDE2981489300DE453F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		10B74BE029814B7B00DE453F /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		10B74BE229814CD900DE453F /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
-		10B74BE42981509300DE453F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104969C62983D89F0068E148 /* addtodo-module */ = {
+			isa = PBXGroup;
+			children = (
+				104969CB2983D8C40068E148 /* protocols */,
+				104969CA2983D8BD0068E148 /* router */,
+				104969C92983D8B70068E148 /* interactor */,
+				104969C82983D8B00068E148 /* presenter */,
+				104969C72983D8A80068E148 /* view */,
+			);
+			path = "addtodo-module";
+			sourceTree = "<group>";
+		};
+		104969C72983D8A80068E148 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				10B74BE229814CD900DE453F /* AddTodoViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		104969C82983D8B00068E148 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				104969CC2983D8D70068E148 /* AddTodoPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		104969C92983D8B70068E148 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				104969CE2983D8EB0068E148 /* AddTodoInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		104969CA2983D8BD0068E148 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				104969D02983D9000068E148 /* AddTodoRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		104969CB2983D8C40068E148 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				104969D22983D90C0068E148 /* AddTodoProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 		10B74BBE2981473400DE453F = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +122,12 @@
 		10B74BC92981473400DE453F /* TodoAppWithProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				104969C62983D89F0068E148 /* addtodo-module */,
 				10B74BCA2981473400DE453F /* AppDelegate.swift */,
 				10B74BCC2981473400DE453F /* SceneDelegate.swift */,
 				10B74BCE2981473400DE453F /* ViewController.swift */,
 				10B74BDE2981489300DE453F /* TableViewCell.swift */,
 				10B74BE029814B7B00DE453F /* Todo.swift */,
-				10B74BE229814CD900DE453F /* AddTodoViewController.swift */,
-				10B74BE42981509300DE453F /* Protocols.swift */,
 				10B74BD02981473400DE453F /* Main.storyboard */,
 				10B74BD32981473500DE453F /* Assets.xcassets */,
 				10B74BD52981473500DE453F /* LaunchScreen.storyboard */,
@@ -150,12 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104969CD2983D8D70068E148 /* AddTodoPresenter.swift in Sources */,
 				10B74BCF2981473400DE453F /* ViewController.swift in Sources */,
+				104969CF2983D8EB0068E148 /* AddTodoInteractor.swift in Sources */,
 				10B74BDF2981489300DE453F /* TableViewCell.swift in Sources */,
-				10B74BE52981509300DE453F /* Protocols.swift in Sources */,
 				10B74BCB2981473400DE453F /* AppDelegate.swift in Sources */,
 				10B74BCD2981473400DE453F /* SceneDelegate.swift in Sources */,
 				10B74BE329814CD900DE453F /* AddTodoViewController.swift in Sources */,
+				104969D32983D90C0068E148 /* AddTodoProtocols.swift in Sources */,
+				104969D12983D9000068E148 /* AddTodoRouter.swift in Sources */,
 				10B74BE129814B7B00DE453F /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
